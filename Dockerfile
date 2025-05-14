@@ -12,7 +12,7 @@ COPY . .
 
 RUN mvn clean package
 
-# Estágio de produção
+
 FROM openjdk:17-jdk-slim
 
 WORKDIR /gatewaysservice
