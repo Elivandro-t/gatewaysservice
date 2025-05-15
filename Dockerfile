@@ -18,6 +18,6 @@ FROM openjdk:17-jdk-slim
 WORKDIR /gatewaysservice
 
 COPY --from=build /gatewaysservice/target/gatewaysservice-0.0.1-SNAPSHOT.jar gatewaysservice.jar
-
+EXPOSE 8080
 ENV DATA_DIR=/var/lib/data
 CMD ["java", "-jar", "gatewaysservice.jar"]
